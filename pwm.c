@@ -31,7 +31,7 @@ ISR(TIMER1_COMPA_vect){
 
     OCR2A = value;
 
-    value += 10;
+    value += 5;
 
     if( value >= 254 ) i = 1;
     
@@ -39,7 +39,7 @@ ISR(TIMER1_COMPA_vect){
 
     OCR2A = value;
 
-    value -= 10;
+    value -= 5;
 
     if( value <= 0 ) i = 0;
 
