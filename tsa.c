@@ -65,7 +65,7 @@ ISR(ADC_vect){
 
   uint16_t value = ADCW;
 
-  if     (value > 10 && value <= 128)   PORTB = 0x10, PORTD = 0x00; //LED 1 on
+  if     (value > 10  && value <= 128)  PORTB = 0x10, PORTD = 0x00; //LED 1 on
   else if(value > 128 && value <= 256)  PORTB = 0x18, PORTD = 0x00; //LEDs 1-2 on
   else if(value > 256 && value <= 384)  PORTB = 0x1C, PORTD = 0x00; //LEDs 1-3 on
   else if(value > 384 && value <= 512)  PORTB = 0x1E, PORTD = 0x00; //LEDs 1-4 on
