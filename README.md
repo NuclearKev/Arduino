@@ -5,12 +5,7 @@ All the programs are free software under the GPLv3, use them as you wish.
 
 You will need a few things in order to use these programs:
 
-an Arduino
-lib-avr
-avr-gcc
-avrdude
-a nice text editor 
-(You might need something else but I don't remember)
+an Arduino, lib-avr, avr-gcc, avrdude, and a nice text editor (You might need something else but I don't remember)
 
 You'll notice most of them are rather rudimentary (such as the header files); but keep in mind they are all for education.
 
