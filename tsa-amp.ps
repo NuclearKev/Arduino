@@ -1,6 +1,6 @@
 %!PS-Adobe-3.0
 %%Creator: gEDA gschem 1.8.1-20121123-13-g875406c
-%%CreationDate: Tue Jun 30 14:52:23 2015
+%%CreationDate: Fri Jul  3 14:24:56 2015
 %%Title: /home/kevin/development/analog/tsa-amp.sch
 %%Author: (null)
 %%BoundingBox: 0 0 612 792
@@ -506,31 +506,31 @@ gsave
 false false false false 202.222224 [(3k) ] 0 48000 47700 180.555557 text
 grestore
 gsave
-47400 46800 47400 46000 10 line
-47400 46800 48000 46400 10 line
-48000 46400 47400 46000 10 line
-47500 46650 47500 46550 10 line
-47450 46600 47550 46600 10 line
+47400 46000 47400 46800 10 line
+47400 46000 48000 46400 10 line
+48000 46400 47400 46800 10 line
+47500 46150 47500 46250 10 line
 47450 46200 47550 46200 10 line
-47200 46600 47400 46600 10 line
-gsave
-false true false false 161.777776 [(1) ] 0 47350 46650 144.444443 text
-grestore
+47450 46600 47550 46600 10 line
 47200 46200 47400 46200 10 line
 gsave
-false true false false 161.777776 [(2) ] 0 47350 46250 144.444443 text
+false true false true 161.777776 [(1) ] 0 47350 46150 144.444443 text
+grestore
+47200 46600 47400 46600 10 line
+gsave
+false true false true 161.777776 [(2) ] 0 47350 46550 144.444443 text
 grestore
 48000 46400 48200 46400 10 line
 gsave
-false false false false 161.777776 [(5) ] 0 48000 46450 144.444443 text
-grestore
-47700 46600 47700 46800 10 line
-gsave
-false false false false 161.777776 [(3) ] 0 47750 46600 144.444443 text
+false false false true 161.777776 [(5) ] 0 48000 46350 144.444443 text
 grestore
 47700 46200 47700 46000 10 line
 gsave
-false false false false 161.777776 [(4) ] 0 47750 46100 144.444443 text
+false false false true 161.777776 [(3) ] 0 47750 46200 144.444443 text
+grestore
+47700 46600 47700 46800 10 line
+gsave
+false false false true 161.777776 [(4) ] 0 47750 46700 144.444443 text
 grestore
 newpath
 47200 46600
@@ -539,7 +539,7 @@ newpath
 fill
 grestore
 gsave
-false false false false 202.222224 [(U1) ] 0 47900 46600 180.555557 text
+false false false true 202.222224 [(U1) ] 0 48000 46800 180.555557 text
 grestore
 gsave
 48600 45800 49000 45800 10 line
@@ -649,13 +649,7 @@ gsave
 47550 47000 47850 47000 10 line
 grestore
 gsave
-true false false false 202.222224 [(Vs:10) ] 0 47700 47050 180.555557 text
-grestore
-gsave
-47700 45800 47700 46000 10 line
-47600 45800 47800 45800 10 line
-47655 45750 47745 45750 10 line
-47680 45710 47720 45710 10 line
+true false false false 202.222224 [(Vs:12) ] 0 47700 47050 180.555557 text
 grestore
 gsave
 50000 44400 50000 44600 10 line
@@ -683,7 +677,6 @@ grestore
 46900 46600 47200 46600 10 line
 47500 47500 47200 47500 10 line
 47200 47500 47200 46600 10 line
-48400 47500 48400 46400 10 line
 48200 46400 51100 46400 10 line
 48800 44600 51100 44600 10 line
 48800 45500 51700 45500 10 line
@@ -712,7 +705,7 @@ grestore
 47200 46200 46900 46200 10 line
 46900 46200 46900 45700 10 line
 gsave
-false false false false 242.666672 [(NOTE: U1 and D1-4 can be any device capable of 0-10V.) (           The values for R1 and R2 can be whatever as long) (          as the gain is 4. ) (          Vin is from the computer or audio source.) (          Output is tied to the Arduino's ADC pin.) ] 0 46400 42600 216.666672 text
+false false false false 242.666672 [(NOTE: U1 and D1-4 can be any device capable of -12 to +12V.) (           The values for R1 and R2 can be whatever as long) (          as the gain is 4. ) (          Vin is from the computer or audio source.) (          Output is tied to the Arduino's ADC pin.) ] 0 46400 42600 216.666672 text
 grestore
 gsave
 false false false false 283.111104 [(Arduino Time Spectrum Analyzer Amplifier) ] 0 50000 40900 252.777771 text
@@ -727,7 +720,7 @@ gsave
 false false false false 202.222224 [(1) ] 0 52000 40100 180.555557 text
 grestore
 gsave
-false false false false 202.222224 [(2.2.3) ] 0 53800 40400 180.555557 text
+false false false false 202.222224 [(2.3.4) ] 0 53800 40400 180.555557 text
 grestore
 gsave
 false false false false 202.222224 [(Kevin "The Nuclear" Bloom) ] 0 53900 40100 180.555557 text
@@ -737,7 +730,7 @@ gsave
 42550 47000 42850 47000 10 line
 grestore
 gsave
-true false false false 202.222224 [(Vs:10) ] 0 42700 47050 180.555557 text
+true false false false 202.222224 [(Vs:12) ] 0 42700 47050 180.555557 text
 grestore
 gsave
 42800 46200 42600 46300 10 line
@@ -781,7 +774,7 @@ gsave
 false false false false 202.222224 [(R4) ] 0 42900 45500 180.555557 text
 grestore
 gsave
-false false false false 202.222224 [(250) ] 0 42900 45300 180.555557 text
+false false false false 202.222224 [(500) ] 0 42900 45300 180.555557 text
 grestore
 gsave
 42700 44800 42700 45000 10 line
@@ -804,6 +797,15 @@ grestore
 gsave
 false false false false 242.666672 [(NOTE: This voltage divider is to acquire 8V for the reference ) (           voltage on the Arduino. The values of R3 and R4 can ) (           be whatever, as long as 8V is available at the Vref.) (          mark.) ] 0 40200 42800 216.666672 text
 grestore
+48400 47500 48800 47500 10 line
+48800 47500 48800 46400 10 line
+gsave
+47700 46000 47700 45800 10 line
+47850 45800 47550 45800 10 line
+grestore
+gsave
+true false false true 202.222224 [(-Vs:-12) ] 0 47700 45750 180.555557 text
+grestore
 newpath
 47200 46600
 25
@@ -870,22 +872,12 @@ newpath
 0 360 arc
 fill
 newpath
-48400 46400
-25
-0 360 arc
-fill
-newpath
-48400 46400
-25
-0 360 arc
-fill
-newpath
 48800 46400
 25
 0 360 arc
 fill
 newpath
-48400 46400
+48800 46400
 25
 0 360 arc
 fill
@@ -921,6 +913,16 @@ newpath
 fill
 newpath
 42700 45900
+25
+0 360 arc
+fill
+newpath
+48800 46400
+25
+0 360 arc
+fill
+newpath
+48800 46400
 25
 0 360 arc
 fill
