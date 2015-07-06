@@ -39,7 +39,7 @@ void main(){
   cli();
 
   /* Prescaler at 128 so we have an 125Khz clock source */
-  ADCSRA |= ((1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0));    
+  ADCSRA |= ((0<<ADPS2)|(1<<ADPS1)|(0<<ADPS0));    
   /* enable free running mode */
   ADCSRB |= ~((1<<ADTS2)|(1<<ADTS1)|(1<<ADTS0));
   /* enable auto trigger */
@@ -65,7 +65,7 @@ ISR(ADC_vect){
 
   uint16_t value = ADCW;
 
-  if     (value > 10  && value <= 128)  PORTB = 0x10, PORTD = 0x00; //LED 1 on
+  if     (value > 50  && value <= 128)  PORTB = 0x10, PORTD = 0x00; //LED 1 on
   else if(value > 128 && value <= 256)  PORTB = 0x18, PORTD = 0x00; //LEDs 1-2 on
   else if(value > 256 && value <= 384)  PORTB = 0x1C, PORTD = 0x00; //LEDs 1-3 on
   else if(value > 384 && value <= 512)  PORTB = 0x1E, PORTD = 0x00; //LEDs 1-4 on
@@ -73,7 +73,7 @@ ISR(ADC_vect){
   else if(value > 640 && value <= 768)  PORTB = 0x1F, PORTD = 0x80; //LEDS 1-6 on
   else if(value > 768 && value <= 896)  PORTB = 0x1F, PORTD = 0xC0; //LEDs 1-7 on
   else if(value > 896 && value <= 1023) PORTB = 0x1F, PORTD = 0xE0; //All LEDs on
-  else if(value <= 10)                  PORTB = 0x00, PORTD = 0x00; //All LEDs off
+  else if(value <= 50)                  PORTB = 0x00, PORTD = 0x00; //All LEDs off
 
 }
 
