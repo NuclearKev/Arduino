@@ -17,4 +17,6 @@ pwm.c: This program shows how PWM works on the arduino. It works best with an LE
 
 compile-convert-upload.sh: This is a shell script that you can run that will compile your code, convert it a intel .hex format, and upload it to the Arduino. 
 
-tsa.c: This is a basic Time Spectrum Analyzer (it does NOT use the Fourier Transform yet!) program. All it does is take the audio and output the volume to some LEDs right now. You can view the tsa-amp.ps (you'll need to download it) file to see the op-amp circuit I designed in order for the Arduino to be able to pick up the voltage. 
+vu.c: This is a basic VU meter program. All it does is take the audio and output the volume to some LEDs right now. You can view the tsa-amp.ps (you'll need to download it) file to see the op-amp circuit I designed in order for the Arduino to be able to pick up the voltage. 
+
+vu-amp.ps: This is a schematic for a simple op-amp circuit for the vu.c program. Please note that this is a generic design and the resistor values can be changed to whatever you want. In my case, I used a 25k pot for R2 so that I could keep the volume on the computer low and still get a good response on the LEDs.
