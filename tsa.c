@@ -17,7 +17,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 Rundown:
 
  *Green LEDs are tied to PORTB pins
- *Red LEDs are tied to PORTx pins
+ *Red LEDs are tied to PORTD pins
  *Pin 13 will NOT be used but 5-12 will be
  *The volume intensity is opposite of the pin numbers
   -Pin 12 is the lowest LED, Pin 8 is the last green, and Pin 5 is the max
@@ -39,7 +39,7 @@ void main(){
   cli();
 
   /* Prescaler at 128 so we have an 125Khz clock source */
-  ADCSRA |= ((0<<ADPS2)|(1<<ADPS1)|(0<<ADPS0));    
+  ADCSRA |= ((1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0));    
   /* enable free running mode */
   ADCSRB |= ~((1<<ADTS2)|(1<<ADTS1)|(1<<ADTS0));
   /* enable auto trigger */
