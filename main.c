@@ -9,7 +9,7 @@ For the USART function, it is best to see using GNU Screen or whatever.
 
 Enjoy. */
 
-
+#include <stdio.h>
 #include "usart.h"
 #include "Timer1.h"
 
@@ -23,17 +23,23 @@ uint8_t i = 0;
 
 int main(){
 
-  //  USART();
+  USART();
 
-  Timer1();
+  //  Timer1();
  
 }
 
 void USART(){
 
+  uint8_t SendBuffer[12] = {'H', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd', '!'};
+
   USART_Init(UBRR);
 
-  while(1) USART_Trans(USART_Rec());
+  uint8_t i;
+
+  for(i = 0; i < 12; i++){
+    USART_Trans(SendBuffer[i]);
+  }
 
 }
 
