@@ -7,7 +7,8 @@ and receiving so merry Christmas. Lastly, this function sets up the USART to
 use 8-bit data and 2 stop bits. Look your chips documentation otherwise.
 
 2.) USART Transfer: This transfers some data, obviously. This function is
-pretty straight foreword and all it does it transmit. 
+pretty straight foreword and all it does it transmit. You can transfer multiple
+bytes of data by using an array.
 
 3.) USART Receive: This receives data from some external source. Once again,
 this is straight foreward and all it does is receive. 
@@ -29,7 +30,7 @@ Enjoy. */
 void USART_Init(uint16_t ubrr);
 
 /* Transfer  */
-void USART_Trans(unsigned char data);
+void USART_Trans(unsigned char data[], uint64_t size);
 
 /* Receive */
 unsigned char USART_Rec();

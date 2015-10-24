@@ -37,9 +37,7 @@ void USART(){
 
   uint8_t i;
 
-  for(i = 0; i < 12; i++){
-    USART_Trans(SendBuffer[i]);
-  }
+  USART_Trans(SendBuffer, 12);
 
 }
 

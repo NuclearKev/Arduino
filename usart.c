@@ -16,14 +16,19 @@ void USART_Init(uint16_t ubrr){
 
 }
 
-void USART_Trans(unsigned char data){
+void USART_Trans(unsigned char data[], uint64_t size){
+  
+  uint64_t i;
 
-  /* Wait for the transmit buffer to be empty */
-  while( !( UCSR0A & (1<<UDRE0) ) );
+  for(i = 0; i < size; i++){
+ 
+    /* Wait for the transmit buffer to be empty */
+    while( !( UCSR0A & (1<<UDRE0) ) );
 
-  /* Puts data into the transfer buffer, send data */
-  UDR0 = data;
-
+    /* Puts data into the transfer buffer, send data */
+    UDR0 = data[i];
+    
+  }
 }
 
 unsigned char USART_Rec(){
