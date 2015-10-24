@@ -21,22 +21,25 @@ void USART_Trans(unsigned char data[], uint64_t size){
   uint64_t i;
 
   for(i = 0; i < size; i++){
- 
     /* Wait for the transmit buffer to be empty */
     while( !( UCSR0A & (1<<UDRE0) ) );
-
     /* Puts data into the transfer buffer, send data */
     UDR0 = data[i];
     
   }
 }
 
-unsigned char USART_Rec(){
+unsigned char *USART_Rec(uint64_t bytes){
 
-  /* Wait for data */
-  while( !(UCSR0A & (1<<RXC0))  );
+  unsigned char ReceiveBuffer[bytes];
+  uint64_t i;
 
-  /* Return received data  */
-  return UDR0;
+  for(i = 0; i < bytes; i++){
+    /* Wait for data */
+    while( !(UCSR0A & (1<<RXC0)) );
+    /* Put data into buffer */
+    ReceiveBuffer[i] =  UDR0;
+  }
 
+  return ReceiveBuffer;
 }

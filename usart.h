@@ -33,6 +33,6 @@ void USART_Init(uint16_t ubrr);
 void USART_Trans(unsigned char data[], uint64_t size);
 
 /* Receive */
-unsigned char USART_Rec();
+unsigned char *USART_Rec(uint64_t bytes);
 
 #endif //usart_h

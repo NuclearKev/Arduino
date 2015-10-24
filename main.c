@@ -30,14 +30,18 @@ int main(){
 }
 
 void USART(){
-
-  uint8_t SendBuffer[12] = {'H', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd', '!'};
+  
+  /* ReceiveBuffer needs to be a pointer*/
+  unsigned char SendBuffer[13] = {'H', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd', '!', '\n'},
+    *ReceiveBuffer;
 
   USART_Init(UBRR);
 
-  uint8_t i;
+  uint64_t i;
 
-  USART_Trans(SendBuffer, 12);
+  ReceiveBuffer = USART_Rec(13);
+
+  USART_Trans(ReceiveBuffer, 13);
 
 }
 
