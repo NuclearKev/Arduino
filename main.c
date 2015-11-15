@@ -43,6 +43,8 @@ void USART(){
 
   USART_Trans(ReceiveBuffer, 13);
 
+  free(ReceiveBuffer);
+
 }
 
 void Timer1(){

@@ -1,5 +1,6 @@
 /* This is apart of the USART library for the ATMEGA328P chip. Enjoy */
 
+#include <stdlib.h>
 #include "usart.h"
 
 void USART_Init(uint16_t ubrr){
@@ -31,7 +32,7 @@ void USART_Trans(unsigned char data[], uint64_t size){
 
 unsigned char *USART_Rec(uint64_t bytes){
 
-  unsigned char ReceiveBuffer[bytes];
+  unsigned char *ReceiveBuffer = (unsigned char*)malloc(sizeof(unsigned char)*bytes); //allocates space for the array
   uint64_t i;
 
   for(i = 0; i < bytes; i++){
