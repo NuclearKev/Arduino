@@ -1,22 +1,48 @@
 # Arduino
-This repo contains a bunch of programs that I created for the Arduino Uno board. This was entirely for educational purposes.
-
-All the programs are free software under the GPLv3, use them as you wish.
-
+This repo contains a bunch of programs that I created for the Arduino Uno board.
+This was entirely for educational purposes. All the programs are free software
+under the GPLv3, use them as you wish.
 You will need a few things in order to use these programs:
 
-an Arduino, lib-avr, avr-gcc, avrdude, and a nice text editor (You might need something else but I don't remember)
+* an Arduino
 
-You'll notice most of them are rather rudimentary (such as the header files); but keep in mind they are all for education.
+* lib-avr
 
-main.c: This is simple program that you can use to see the USART and the Timer1 in action. 
+* avr-gcc
 
-adc.c: You can use this to see the ADC working on the board. Keep in mind that it converts the value into a character and spits it out using the USART. Thus, you will need something like GNU Screen to see it.
+* avrdude
 
-pwm.c: This program shows how PWM works on the arduino. It works best with an LED; you'll get a cool glowing effect. You can also use a servo with it but it'll act weird. 
+* a nice text editor
 
-compile-convert-upload.sh: This is a shell script that you can run that will compile your code, convert it a intel .hex format, and upload it to the Arduino. 
+## main.c
+This is simple program that you can use to see the USART and the Timer1 in
+action.
 
-vu.c: This is a basic VU meter program. All it does is take the audio and output the volume to some LEDs right now. You can view the tsa-amp.ps (you'll need to download it) file to see the op-amp circuit I designed in order for the Arduino to be able to pick up the voltage. 
+## adc.c
+You can use this to see the ADC working on the board. Keep in mind that it
+converts the value into a character and spits it out using the USART. Thus, you
+will need something like GNU Screen to see it.
 
-vu-amp.ps: This is a schematic for a simple op-amp circuit for the vu.c program. Please note that this is a generic design and the resistor values can be changed to whatever you want. In my case, I used a 25k pot for R2 so that I could keep the volume on the computer low and still get a good response on the LEDs.
+## pwm.c
+This program shows how PWM works on the arduino. It works best with an LED;
+you'll get a cool glowing effect. You can also use a servo
+with it but it'll act weird.
+
+## compile-convert-upload.sh
+This is a shell script that you can run that will compile your code, convert it
+a intel .hex format, and upload it to the Arduino.
+
+## vu.c
+This is a basic VU meter program. All it does is take the audio and output the
+volume to some LEDs right now. You can view the tsa-amp.ps (you'll need to
+download it) file to see the op-amp circuit I designed in order for the Arduino
+to be able to pick up the voltage.
+
+## vu-amp.ps
+This is a schematic for a simple op-amp circuit for the vu.c program. Please
+note that this is a generic design and the resistor values can be changed to
+whatever you want. In my case, I used a 25k pot for R2 so that I could keep the
+volume on the computer low and still get a good response on the LEDs. Also note
+that if you choose to use a pot, like I did, you want another resistor in series
+with it so that if you turn the pot all the way down, you don't short out the
+output of the op-amp.
