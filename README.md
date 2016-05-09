@@ -25,8 +25,8 @@ will need something like GNU Screen to see it.
 
 ## pwm.c
 This program shows how PWM works on the arduino. It works best with an LED;
-you'll get a cool glowing effect. You can also use a servo
-with it but it'll act weird.
+you'll get a cool glowing effect. You can also use a servo with it but it'll act
+weird.
 
 ## compile-convert-upload.sh
 This is a shell script that you can run that will compile your code, convert it
@@ -34,7 +34,7 @@ a intel .hex format, and upload it to the Arduino.
 
 ## vu.c
 This is a basic VU meter program. All it does is take the audio and output the
-volume to some LEDs right now. You can view the tsa-amp.ps (you'll need to
+volume to some LEDs right now. You can view the vu-amp.ps (you'll need to
 download it) file to see the op-amp circuit I designed in order for the Arduino
 to be able to pick up the voltage.
 
